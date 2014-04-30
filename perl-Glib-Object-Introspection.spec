@@ -20,7 +20,8 @@ BuildRequires:	gobject-introspection-devel
 # For tests:
 BuildRequires:	pkgconfig(cairo-gobject)
 BuildRequires:	pkgconfig(cairo)
-BuildRequires:	perl(Cairo::GObject)
+BuildRequires:	pkgconfig(libffi)
+BuildRequires:	perl-Cairo-GObject
 # (tv) t/00-basic-types.t line 51 failed with C locale
 BuildRequires:	locales-en
 Requires:	perl(Glib) >= 1.270.0
