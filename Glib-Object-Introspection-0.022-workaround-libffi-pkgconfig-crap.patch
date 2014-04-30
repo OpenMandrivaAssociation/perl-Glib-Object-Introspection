@@ -1,0 +1,22 @@
+--- Glib-Object-Introspection-0.022/Makefile.PL~	2014-03-25 07:37:37.000000000 +0100
++++ Glib-Object-Introspection-0.022/Makefile.PL	2014-04-30 23:33:14.662704890 +0200
+@@ -122,17 +122,8 @@ if (!$cfg_success) {
+   exit 0;
+ }
+ 
+-$cfg_success = eval {
+-  my %cfg_ffi = ExtUtils::PkgConfig->find (
+-    "libffi >= $BUILD_REQ{'libffi'}");
+-  $cfg{cflags} .= " $cfg_ffi{cflags}";
+-  $cfg{libs} .= " $cfg_ffi{libs}";
+-  1;
+-};
+-if (!$cfg_success) {
+-  warn $@;
+-  exit 0;
+-}
++  $cfg{cflags} .= " -I/usr/lib*/libffi*/include";
++  $cfg{libs} .= " -lffi";
+ 
+ mkdir 'build', 0777;
+ 
