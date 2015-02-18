@@ -1,9 +1,9 @@
 %define	modname	Glib-Object-Introspection
-%define	modver	0.025
+%define	modver	0.027
 
 Name:		perl-%{modname}
 Version:	%{perl_convert_version %{modver}}
-Release:	2
+Release:	1
 
 Summary:	Dynamically create Perl language bindings
 License:	LGPLv2
@@ -22,7 +22,7 @@ BuildRequires:	gobject-introspection-devel
 BuildRequires:	pkgconfig(cairo-gobject)
 BuildRequires:	pkgconfig(cairo)
 BuildRequires:	pkgconfig(libffi)
-BuildRequires:	perl-Cairo-GObject
+BuildRequires:	perl(Cairo::GObject)
 # (tv) t/00-basic-types.t line 51 failed with C locale
 BuildRequires:	locales-en
 Requires:	perl(Glib) >= 1.270.0
