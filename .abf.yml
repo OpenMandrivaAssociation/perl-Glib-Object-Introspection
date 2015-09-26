@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   Glib-Object-Introspection-0.027.tar.gz: 9c2db5caaeb7fa52093114d24cede1aba491ddee
+sources:
+  Glib-Object-Introspection-0.031.tar.gz: b02cfd589bcd80ec65e8123cbdd0df9158692f3e

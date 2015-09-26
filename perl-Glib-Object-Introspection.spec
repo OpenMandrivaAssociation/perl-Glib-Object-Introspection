@@ -1,9 +1,9 @@
 %define	modname	Glib-Object-Introspection
-%define	modver	0.027
+%define	modver	0.031
 
 Name:		perl-%{modname}
 Version:	%{perl_convert_version %{modver}}
-Release:	2
+Release:	1
 
 Summary:	Dynamically create Perl language bindings
 License:	LGPLv2
@@ -57,5 +57,6 @@ LC_ALL=en_US.UTF-8 make test
 
 %files
 %doc LICENSE META.json META.yml MYMETA.yml NEWS README
+%{_bindir}/perli11ndoc
 %{_mandir}/man3/*
 %{perl_vendorlib}/*
