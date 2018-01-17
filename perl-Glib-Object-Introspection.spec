@@ -1,5 +1,5 @@
 %define	modname	Glib-Object-Introspection
-%define	modver	0.040
+%define	modver	0.044
 
 Name:		perl-%{modname}
 Version:	%{perl_convert_version %{modver}}
@@ -17,7 +17,7 @@ BuildRequires:	perl(ExtUtils::MakeMaker)
 BuildRequires:	perl(ExtUtils::PkgConfig) >= 1.0.0
 BuildRequires:	perl(Glib) >= 1.270.0
 BuildRequires:	perl-devel
-BuildRequires:	gobject-introspection-devel
+BuildRequires:	pkgconfig(gobject-introspection-1.0)
 # For tests:
 BuildRequires:	pkgconfig(cairo-gobject)
 BuildRequires:	pkgconfig(cairo)
