@@ -1,6 +1,7 @@
 %define	modname	Glib-Object-Introspection
 %define	modver	0.046
 %global ldflags %ldflags -lglib-2.0
+%define _disable_ld_no_undefined 1
 
 Name:		perl-%{modname}
 Version:	%{perl_convert_version %{modver}}
