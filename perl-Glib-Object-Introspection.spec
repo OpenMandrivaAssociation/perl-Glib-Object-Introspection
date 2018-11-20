@@ -42,18 +42,18 @@ mandatory:
 
 %prep
 %setup -q -n %{modname}-%{modver}
-%apply_patches
+%autopatch -p1
 
 %build
-perl Makefile.PL INSTALLDIRS=vendor
-%make
+perl Makefile.PL INSTALLDIRS=vendor OPTIMIZE="%{optflags}" LIBS="-lglib" verbose
+%make_build
 
 %check
 exit 0
 LC_ALL=en_US.UTF-8 make test
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc LICENSE META.json META.yml MYMETA.yml NEWS README
