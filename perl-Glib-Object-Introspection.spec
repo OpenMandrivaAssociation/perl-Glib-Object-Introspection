@@ -56,7 +56,7 @@ LC_ALL=en_US.UTF-8 make test
 %make_install
 
 %files
-%doc LICENSE META.json META.yml MYMETA.yml NEWS README
+%doc LICENSE META.json META.yml NEWS README
 %{_bindir}/perli11ndoc
 %{_mandir}/man3/*
-%{perl_vendorlib}/*
+%{perl_vendorarch}/*
