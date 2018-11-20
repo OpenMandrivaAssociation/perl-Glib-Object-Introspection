@@ -1,7 +1,5 @@
 %define	modname	Glib-Object-Introspection
 %define	modver	0.046
-%global ldflags %ldflags -lglib-2.0
-%define _disable_ld_no_undefined 1
 
 Name:		perl-%{modname}
 Version:	%{perl_convert_version %{modver}}
@@ -47,9 +45,8 @@ mandatory:
 %autopatch -p1
 
 %build
-%setup_compile_flags
-perl Makefile.PL INSTALLDIRS=vendor OPTIMIZE="%{optflags} -lglib-2.0" LIBS="-lglib-2.0" verbose
-%make_build LIBS="-lglib-2.0"
+perl Makefile.PL INSTALLDIRS=vendor OPTIMIZE="%{optflags}" LIBS="-lglib-2.0"
+%make_build LIBS="-lglib-2.0" OTHERLDFLAGS="%{?ldflags} -L%{_libdir} -lglib-2.0"
 
 %check
 exit 0
