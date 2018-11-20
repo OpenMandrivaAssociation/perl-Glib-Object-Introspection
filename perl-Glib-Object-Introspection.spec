@@ -45,8 +45,8 @@ mandatory:
 %autopatch -p1
 
 %build
-perl Makefile.PL INSTALLDIRS=vendor OPTIMIZE="%{optflags}" LIBS="-lglib-2.0" verbose
-%make_build
+perl Makefile.PL INSTALLDIRS=vendor OPTIMIZE="%{optflags}" LIBS="-lglib-2.0" EXTRALIBS="-lglib-2.0" LDLOADLIBS="-lglib-2.0" verbose
+%make_build LIBS="-lglib-2.0" EXTRALIBS="-lglib-2.0" LDLOADLIBS="-lglib-2.0"
 
 %check
 exit 0
