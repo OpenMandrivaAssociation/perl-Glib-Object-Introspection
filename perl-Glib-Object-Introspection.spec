@@ -1,5 +1,5 @@
 %define	modname	Glib-Object-Introspection
-%define	modver	0.047
+%define	modver	0.048
 
 Name:		perl-%{modname}
 Version:	%{perl_convert_version %{modver}}
