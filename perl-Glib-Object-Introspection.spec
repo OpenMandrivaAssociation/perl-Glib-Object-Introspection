@@ -1,9 +1,10 @@
-%define	modname	Glib-Object-Introspection
-%define	modver	0.048
+%define modname Glib-Object-Introspection
+%define modver 0.048
+%{?perl_default_filter}
 
 Name:		perl-%{modname}
 Version:	%{perl_convert_version %{modver}}
-Release:	1
+Release:	2
 
 Summary:	Dynamically create Perl language bindings
 License:	LGPLv2
@@ -40,9 +41,17 @@ mandatory:
   The basename of the library that should be wrapped. If your typelib is
   called 'Gtk-3.0.typelib', then the basename is 'Gtk'.
 
+%package -n perli11ndoc
+Summary:	An interactive documentation viewer based on installed gir files
+Group:		Development/Perl
+Requires:	perl-Gtk3
+
+%description -n perli11ndoc
+perli11ndoc is an interactive documentation viewer based on installed *.gir
+files.
+
 %prep
-%setup -q -n %{modname}-%{modver}
-%autopatch -p1
+%autosetup -n %{modname}-%{modver} -p1
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor OPTIMIZE="%{optflags}"
@@ -57,6 +66,8 @@ LC_ALL=en_US.UTF-8 make test
 
 %files
 %doc LICENSE META.json META.yml NEWS README
-%{_bindir}/perli11ndoc
 %{_mandir}/man3/*
 %{perl_vendorarch}/*
+
+%files -n perli11ndoc
+%{_bindir}/*
