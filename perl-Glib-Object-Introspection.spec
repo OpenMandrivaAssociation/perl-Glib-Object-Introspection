@@ -65,7 +65,7 @@ LC_ALL=en_US.UTF-8 make test
 %make_install
 
 %files
-%doc LICENSE META.json META.yml NEWS README
+%doc LICENSE META.json META.yml NEWS README*
 %{_mandir}/man3/*
 %{perl_vendorarch}/*
 
