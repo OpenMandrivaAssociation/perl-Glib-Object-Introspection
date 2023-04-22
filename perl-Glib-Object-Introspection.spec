@@ -1,10 +1,10 @@
 %define modname Glib-Object-Introspection
-%define modver 0.048
+%define modver 0.050
 %{?perl_default_filter}
 
 Name:		perl-%{modname}
 Version:	%{perl_convert_version %{modver}}
-Release:	3
+Release:	1
 
 Summary:	Dynamically create Perl language bindings
 License:	LGPLv2
