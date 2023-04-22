@@ -67,6 +67,7 @@ LC_ALL=en_US.UTF-8 make test
 %files
 %doc LICENSE META.json META.yml NEWS README*
 %{_mandir}/man3/*
+%{_mandir}/man1/perli11ndoc.1.*
 %{perl_vendorarch}/*
 
 %files -n perli11ndoc
