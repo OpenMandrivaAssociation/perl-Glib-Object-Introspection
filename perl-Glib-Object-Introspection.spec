@@ -9,7 +9,7 @@ Release:	2
 Summary:	Dynamically create Perl language bindings
 License:	LGPLv2
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{modname}
+Url:		https://search.cpan.org/dist/%{modname}
 Source0:	http://www.cpan.org/modules/by-module/Glib/%{modname}-%{modver}.tar.gz
 Patch0:		Glib-Object-Introspection-0.022-workaround-libffi-pkgconfig-crap.patch
 
