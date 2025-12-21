@@ -13,6 +13,7 @@ Url:		https://search.cpan.org/dist/%{modname}
 Source0:	http://www.cpan.org/modules/by-module/Glib/%{modname}-%{modver}.tar.gz
 Patch0:		Glib-Object-Introspection-0.022-workaround-libffi-pkgconfig-crap.patch
 
+BuildRequires:	make
 BuildRequires:	perl(ExtUtils::Depends) >= 0.300.0
 BuildRequires:	perl(ExtUtils::MakeMaker)
 BuildRequires:	perl(ExtUtils::PkgConfig) >= 1.0.0
