@@ -1,16 +1,15 @@
 %define modname Glib-Object-Introspection
-%define modver 0.050
 %{?perl_default_filter}
 
 Name:		perl-%{modname}
-Version:	%{perl_convert_version %{modver}}
-Release:	3
+Version:	0.050
+Release:	4
 
 Summary:	Dynamically create Perl language bindings
 License:	LGPLv2
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/Glib/%{modname}-%{modver}.tar.gz
+Url:		https://metacpan.org/dist/%{modname}
+Source0:	http://www.cpan.org/modules/by-module/Glib/%{modname}-%{version}.tar.gz
 Patch0:		Glib-Object-Introspection-0.022-workaround-libffi-pkgconfig-crap.patch
 
 BuildRequires:	make
@@ -52,7 +51,7 @@ perli11ndoc is an interactive documentation viewer based on installed *.gir
 files.
 
 %prep
-%autosetup -n %{modname}-%{modver} -p1
+%autosetup -n %{modname}-%{version} -p1
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor OPTIMIZE="%{optflags}"
