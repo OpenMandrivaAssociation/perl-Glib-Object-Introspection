@@ -2,8 +2,8 @@
 %{?perl_default_filter}
 
 Name:		perl-%{modname}
-Version:	0.050
-Release:	4
+Version:	0.052
+Release:	1
 
 Summary:	Dynamically create Perl language bindings
 License:	LGPLv2
@@ -51,7 +51,7 @@ perli11ndoc is an interactive documentation viewer based on installed *.gir
 files.
 
 %prep
-%autosetup -n %{modname}-%{version} -p1
+%autosetup -n Glib-Object-Introspection-0.052 -p1
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor OPTIMIZE="%{optflags}"
